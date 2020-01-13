@@ -11,16 +11,54 @@ class Home extends React.Component{
         let d = new Date()
 
         let day = d.getDate()
-        let month = d.getMonth()
+        let month = d.getMonth() + 1
         let year = d.getFullYear()
         
         let hour = addZero(d.getHours())
         let min = addZero(d.getMinutes())
         let sec = addZero(d.getSeconds())
 
-        let time = `${hour}:${min}:${sec}`
-        let date = `${day} ${month} ${year}`
+        switch(month){
+            case 1:
+                month = "January"
+                break
+            case 2:
+                month = "February"
+                break
+            case 3:
+                month = "March"
+                break
+            case 4:
+                month = "April"
+                break
+            case 5:
+                month = "May"
+                break
+            case 6:
+                month = "June"
+                break
+            case 7:
+                month = "July"
+                break
+            case 8:
+                month = "August"
+                break
+            case 9:
+                month = "September"
+                break
+            case 10:
+                month = "October"
+                break
+            case 11:
+                month = "November"
+                break
+            case 12:
+                month = "December"
+                break
+        }
 
+        let time = `${hour}:${min}:${sec}`
+        let date = `${month} ${day}, ${year}`
 
         this.setState({
             time: time, 
