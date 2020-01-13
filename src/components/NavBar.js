@@ -7,6 +7,7 @@ class NavBar extends React.Component{
             <div className = "nav-bar">
                 <div className = "nav-bar-items">
                     <ul className = "nav-bar-list">
+                        <li><NavLink to = "/">Home</NavLink></li>
                         <li><NavLink to = "/about">About</NavLink></li>
                     </ul>
                 </div>
