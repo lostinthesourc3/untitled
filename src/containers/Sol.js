@@ -23,41 +23,28 @@ class Sol extends React.Component{
     getSolarSystem = () => {
         let system = new SolarSystem()
         
-        let sun = system.bodies.sun
-        let mercury = system.bodies.mercury
-        let venus = system.bodies.venus
-        let earth = system.bodies.earth
-        let mars = system.bodies.mars 
-        let jupiter = system.bodies.jupiter 
-        let saturn = system.bodies.saturn 
-        let uranus = system.bodies.uranus 
-        let neptune = system.bodies.neptune 
-        let pluto = system.bodies.pluto
-
-        let sunPosition = sun.position
-        let mercuryPosition = mercury.position
-        let venusPosition = venus.position
-        let earthPosition = earth.position
-        let marsPosition = mars.position
-        let jupiterPosition = jupiter.position 
-        let saturnPosition = saturn.position
-        let uranusPosition = uranus.position
-        let neptunePosition = neptune.position
-        let plutoPosition = pluto.position
-
-        // let arr = [sunPosition, mercuryPosition, venusPosition, earthPosition, marsPosition]
+        let sun = system.bodies.sun.position
+        let mercury = system.bodies.mercury.position
+        let venus = system.bodies.venus.position
+        let earth = system.bodies.earth.position
+        let mars = system.bodies.mars.position
+        let jupiter = system.bodies.jupiter.position
+        let saturn = system.bodies.saturn.position
+        let uranus = system.bodies.uranus.position
+        let neptune = system.bodies.neptune.position
+        let pluto = system.bodies.pluto.position
 
         this.setState({
-            sun: sunPosition,
-            mercury: mercuryPosition,
-            venus: venusPosition,
-            earth: earthPosition,
-            mars: marsPosition,
-            jupiter: jupiterPosition,
-            saturn: saturnPosition,
-            uranus: uranusPosition,
-            neptune: neptunePosition,
-            pluto: plutoPosition
+            sun: sun,
+            mercury: mercury,
+            venus: venus,
+            earth: earth,
+            mars: mars,
+            jupiter: jupiter,
+            saturn: saturn,
+            uranus: uranus,
+            neptune: neptune,
+            pluto: pluto
         })
 
         // return earthPosition
