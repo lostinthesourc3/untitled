@@ -8,18 +8,10 @@ class CurrentWeather extends React.Component{
         currTemp: null,
     }
 
-
-    getGeolocation = () => {
-        navigator.geolocation.getCurrentPosition((location) => {
-            console.log(location.coords.latitude);
-            console.log(location.coords.longitude);
-            console.log(location.coords.accuracy);
-        });
-    }
-
+    
 
     render(){
-        console.log(this.getGeolocation())
+        console.log("LOCATION:", this.getPosition())
         
         return(
             <div>
@@ -30,3 +22,19 @@ class CurrentWeather extends React.Component{
 }
 
 export default CurrentWeather
+
+
+// componentDidMount = () => {
+//     navigator.geolocation.getCurrentPosition(
+//        (position) => {
+//           const initialPosition = JSON.stringify(position);
+//           this.setState({ initialPosition });
+//        },
+//        (error) => alert(error.message),
+//        { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
+//     );
+//     this.watchID = navigator.geolocation.watchPosition((position) => {
+//        const lastPosition = JSON.stringify(position);
+//        this.setState({ lastPosition });
+//     });
+//  }
